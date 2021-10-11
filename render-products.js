@@ -1,1 +1,1 @@
-export function renderProduct
+export function renderShirt
