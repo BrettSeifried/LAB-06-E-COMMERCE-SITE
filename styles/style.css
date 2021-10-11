@@ -1,4 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+* {
+    background-color: #cad2c5;
+}
+header {
+    text-align: center;
+    font-family: 'Potta One', cursive;
+}
+#shirt-list {  
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.shirt-card {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: auto;
+    min-width: px;
+    border: 6px solid #84a98c;
+    border-radius: 20px;
+    align-items: center;
+    margin: 20px;
+    padding: 5px;
+}
+
+.shirt-card:hover {
+    transform: scale3d(1.08, 1.08, 1.08);
+    background-color: #52796f;
+}
+
 img {
     width: 200px;
     height: auto;
+}
+
+button {
+    background-color: #f9c74f;
+}
+
+h3 {
+    max-width: 90%;
+}
+
+h2 {
+    max-height: 90%;
+}
+
+h2, h3, h4, p, button {
+    margin: 0px;
+    font-family: 'Potta One', cursive;
+}
+
+button:hover {
+    transform: scale3d(1.13, 1.13, 1.13);
+    background-color: ;
 }
