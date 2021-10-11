@@ -55,5 +55,4 @@ h2, h3, h4, p, button {
 
 button:hover {
     transform: scale3d(1.13, 1.13, 1.13);
-    background-color: ;
 }
