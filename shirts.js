@@ -26,9 +26,17 @@ export const shirts = [
     {
         id: '4',
         name: 'Red Flowers', 
-        img: './assets/shirt4.jpeg', 
+        img: './assets/shirt4.jpg', 
         description: 'Red flowers on see through black shirt',
         category: 'Party',
         price: 80
+    },
+    {
+        id: '5',
+        name: 'Dino Shirt', 
+        img: './assets/shirt5.jpg', 
+        description: 'Fun multicolored Dino shirt for a casual time',
+        category: 'Kids Party',
+        price: 300
     },
 ];
