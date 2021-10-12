@@ -5,7 +5,7 @@ export const shirts = [
         img: './assets/shirt.webp', 
         description: 'Gold sleeve on black shirt.',
         category: 'UFC',
-        price: '$100',
+        price: '100',
         button: 'Add'
     },
     {
@@ -14,7 +14,7 @@ export const shirts = [
         img: './assets/shirt1.jpeg', 
         description: 'Gold flowers on red Shirt.',
         category: 'Resturant',
-        price: '$125',
+        price: '125',
         button: 'Add'
     },
     {
@@ -23,7 +23,7 @@ export const shirts = [
         img: './assets/shirt2.webp',
         description: 'All gold, all the time.',
         category: 'Villian Dinner',
-        price: '$175',
+        price: '175',
         button: 'Add'
     },
     {
@@ -32,7 +32,7 @@ export const shirts = [
         img: './assets/shirt4.jpg', 
         description: 'Red flowers on see through black shirt',
         category: 'Party',
-        price: '$80',
+        price: '80',
         button: 'Add'
     },
     {
@@ -41,7 +41,7 @@ export const shirts = [
         img: './assets/shirt5.jpg', 
         description: 'Fun multicolored Dino shirt for a casual time',
         category: 'Kids Party',
-        price: '$300',
+        price: '300',
         button: 'Add'
     },
 ];

@@ -5,3 +5,9 @@ export function findById(id, items){
         }
     }
 }
+
+// export function calcOrderTotal(tdTotal){
+//     const sum =
+
+//     }
+// };
