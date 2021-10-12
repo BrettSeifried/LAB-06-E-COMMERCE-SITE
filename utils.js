@@ -14,3 +14,7 @@ export function calcOrderTotal(cart, shirts) {
     }
     return orderTotal;
 }
+
+export function toUSD(number){
+    return number.toLocaleString('en-us', { style: 'currency', currency: 'USD' });
+}

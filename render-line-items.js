@@ -1,3 +1,5 @@
+import { toUSD } from '../utils.js';
+
 export function renderLineItem(cartItem, shirtData) {
     const tr = document.createElement('tr');
 
@@ -5,13 +7,15 @@ export function renderLineItem(cartItem, shirtData) {
     tdName.textContent = shirtData.name;
 
     const tdPrice = document.createElement('td');
-    tdPrice.textContent = `$${shirtData.price}`;
+    const price = shirtData.price;
+    tdPrice.textContent = toUSD(price);
 
     const tdQty = document.createElement('td');
     tdQty.textContent = cartItem.qty;
 
     const tdTotal = document.createElement('td');
-    tdTotal.textContent = `$${cartItem.qty * shirtData.price}`;
+    const total = cartItem.qty * shirtData.price;
+    tdTotal.textContent = toUSD(total);
 
     tr.append(tdName, tdPrice, tdQty, tdTotal);
 
