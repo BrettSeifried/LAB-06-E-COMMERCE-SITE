@@ -6,6 +6,11 @@ export function findById(id, items){
     }
 }
 
-export function calcOrderTotal(cart, items) {
-    
+export function calcOrderTotal(cart, shirts) {
+    let orderTotal = 0;
+    for (let item of cart){
+        const shirt = findById(item.id, shirts);
+        orderTotal = orderTotal + shirt.price * item.qty;
+    }
+    return orderTotal;
 }

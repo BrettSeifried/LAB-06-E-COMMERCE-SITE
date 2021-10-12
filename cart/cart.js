@@ -2,7 +2,7 @@ import { shirts } from '../data/shirts.js';
 import { cart } from '../data/cat-data.js';
 import { findById } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
-// import { calcOrderTotal } from '../utils.js';
+import { calcOrderTotal } from '../utils.js';
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){
@@ -26,6 +26,9 @@ for (let cartItem of cart){
     // tr.append(tdName, tdPrice, tdQty, tdTotal);
     tbody.appendChild(tr);
 }
+const orderTotal = calcOrderTotal(cart, shirts);
+const tdOrderTotal = document.getElementById('total');
+tdOrderTotal.textContent = `$${orderTotal}`;
 
 // const tfoot = document.getElementById('tfoot');
 // for (let sumCart of ){
