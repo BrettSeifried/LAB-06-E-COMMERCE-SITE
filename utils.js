@@ -6,8 +6,6 @@ export function findById(id, items){
     }
 }
 
-// export function calcOrderTotal(tdTotal){
-//     const sum =
-
-//     }
-// };
+export function calcOrderTotal(cart, items) {
+    
+}
