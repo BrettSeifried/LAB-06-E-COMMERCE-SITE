@@ -4,6 +4,7 @@ import { renderShirt } from '../render-products.js';
 import { shirts } from '../data/shirts.js';
 import { calcOrderTotal, findById } from '../utils.js';
 import { cart } from '../data/cat-data.js';
+import { renderLineItem } from '../render-line-items.js';
 
 const test = QUnit.test;
 
@@ -18,6 +19,14 @@ test('renderShirt should return an HTML snippet', (expect) => {
 
     //Expect
     // Make assertions about what is expected versus the actual result
+    expect.equal(actual, expected);
+});
+
+test('testing renderLineItem', (expect) => {
+    const expected = '<tr><td>Gold Arm</td><td>$100.00</td><td>2</td><td>$200.00</td></tr>';
+    const cartItem = cart[0];
+    const shirtData = shirts[0];
+    const actual = renderLineItem(cartItem, shirtData).outerHTML;
     expect.equal(actual, expected);
 });
 
