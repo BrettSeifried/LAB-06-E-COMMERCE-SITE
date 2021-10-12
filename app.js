@@ -1,6 +1,6 @@
 // import functions and grab DOM elements
 import { renderShirt } from './render-products.js';
-import { shirts } from './shirts.js';
+import { shirts } from './data/shirts.js';
 
 // initialize global state
 const shirtList = document.getElementById('shirt-list');
