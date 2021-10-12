@@ -2,10 +2,12 @@
 * {
     background-color: #cad2c5;
 }
+
 header {
     text-align: center;
     font-family: 'Potta One', cursive;
 }
+
 #shirt-list {  
     display: flex;
     flex-direction: row;
