@@ -2,7 +2,8 @@
 // import { example } from '../example.js';
 import { renderShirt } from '../render-products.js';
 import { shirts } from '../data/shirts.js';
-import { findById } from '../utils.js';
+import { calcOrderTotal, findById } from '../utils.js';
+import { cart } from '../data/cat-data.js';
 
 const test = QUnit.test;
 
@@ -35,6 +36,9 @@ test('findById should return the item matching the ID', (expect) => {
     expect.deepEqual(actual, expected);
 });
 
-// test('test calOrderTotal should come back as a total', (expect) => {
-//     const expected = 
-// });
+test('test calOrderTotal should come back as a total', (expect) => {
+    const expected = 440;
+    
+    const actual = calcOrderTotal(cart, shirts);
+    expect.deepEqual(actual, expected);
+});
