@@ -1,4 +1,4 @@
-import { toUSD } from '../utils.js';
+import { toUSD } from './utils.js';
 
 export function renderLineItem(cartItem, shirtData) {
     const tr = document.createElement('tr');
