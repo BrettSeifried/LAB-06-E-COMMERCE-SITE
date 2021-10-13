@@ -6,7 +6,6 @@ export const shirts = [
         description: 'Gold sleeve on black shirt.',
         category: 'UFC',
         price: 100,
-        button: 'Add'
     },
     {
         id: '2',
@@ -15,7 +14,6 @@ export const shirts = [
         description: 'Gold flowers on red Shirt.',
         category: 'Resturant',
         price: 125,
-        button: 'Add'
     },
     {
         id: '3',
@@ -24,7 +22,6 @@ export const shirts = [
         description: 'All gold, all the time.',
         category: 'Villian Dinner',
         price: 175,
-        button: 'Add'
     },
     {
         id: '4',
@@ -33,7 +30,6 @@ export const shirts = [
         description: 'Red flowers on see through black shirt',
         category: 'Party',
         price: 80,
-        button: 'Add'
     },
     {
         id: '5',
@@ -42,6 +38,6 @@ export const shirts = [
         description: 'Fun multicolored Dino shirt for a casual time',
         category: 'Kids Party',
         price: 300,
-        button: 'Add'
     },
 ];
+

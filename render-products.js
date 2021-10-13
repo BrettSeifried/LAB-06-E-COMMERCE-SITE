@@ -17,9 +17,11 @@ export function renderShirt(shirt){
     const shirtPrice = document.createElement('p');
     shirtPrice.textContent = shirt.price;
 
-    const button = document.createElement('button');
-    button.textContent = shirt.button;
+    const addBtn = document.createElement('button');
+    addBtn.textContent = 'Add';
+    addBtn.id = shirt.id;
+    addBtn.classList.add('add-button');
 
-    shirtCard.append(shirtHeader, img, shirtDescrip, shirtCat, shirtPrice, button);
+    shirtCard.append(shirtHeader, img, shirtDescrip, shirtCat, shirtPrice, addBtn);
     return shirtCard;
 }
