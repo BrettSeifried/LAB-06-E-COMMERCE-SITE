@@ -1,9 +1,9 @@
 import { shirts } from '../data/shirts.js';
-import { cart } from '../data/cat-data.js';
-import { findById } from '../utils.js';
+// import { cart } from '../data/cat-data.js';
+import { findById, calcOrderTotal, toUSD, getCart, clearCart } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
-import { calcOrderTotal } from '../utils.js';
-import { toUSD } from '../utils.js';
+
+const cart = getCart();
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){
@@ -30,6 +30,13 @@ for (let cartItem of cart){
 const orderTotal = calcOrderTotal(cart, shirts);
 const tdOrderTotal = document.getElementById('total');
 tdOrderTotal.textContent = toUSD(orderTotal);
+
+const orderBtn = document.getElementById('placeOrder');
+orderBtn.addEventListener('click', ()=> {
+    // localStorage.removeItem('CART');
+    // window.location.replace('..');
+    clearCart();
+});
 
 // const tfoot = document.getElementById('tfoot');
 // for (let sumCart of ){
