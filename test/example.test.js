@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { renderShirt } from '../render-products.js';
 import { shirts } from '../data/shirts.js';
-import { calcOrderTotal, findById } from '../utils.js';
+import { addItem, calcOrderTotal, findById, getCart, clearCart } from '../utils.js';
 import { cart } from '../data/cat-data.js';
 import { renderLineItem } from '../render-line-items.js';
 
@@ -50,4 +50,55 @@ test('test calOrderTotal should come back as a total', (expect) => {
     
     const actual = calcOrderTotal(cart, shirts);
     expect.deepEqual(actual, expected);
+});
+
+test('getCart should return the cart if it exist', (expect) => {
+    const fakeCart = [
+        { id: '1', qty: 2 },
+        { id: '4', qty: 3 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    const cart = getCart();
+    expect.deepEqual(cart, fakeCart);
+});
+
+test('getCart should return an empty if the cart does not exist', (expect) =>{
+    localStorage.removeItem('CART');
+    const cart = getCart();
+    expect.deepEqual(cart, []);
+});
+
+test('addItem will increment the quantity', (expect) => {
+    const fakeCart = [
+        { id: '1', qty: 2 },
+        { id: '4', qty: 3 }
+    ];
+    localStorage.setItem('CART', JSON.stringify(fakeCart));
+    addItem('1');
+    const cart = getCart();
+    const expected = [
+        { id: '1', qty: 3 },
+        { id: '4', qty: 3 }
+    ];
+
+    expect.deepEqual(cart, expected);
+});
+
+test('addItem should add an item if its empty', (expect) => {
+    localStorage.removeItem('CART');
+    const expected = [{ id: '1', qty: 1 }];
+    addItem('1');
+    const cart = getCart();
+
+    expect.deepEqual(cart, expected);
+
+});
+
+test('clearCart Empties out the cart', (expect) => {
+    const fakeCart = [
+        { id: '1', qty: 2 },
+        { id: '4', qty: 3 }
+    ];
+    const cart = clearCart(fakeCart);
+    expect.deepEqual(cart);
 });
