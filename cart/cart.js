@@ -1,6 +1,6 @@
 import { shirts } from '../data/shirts.js';
 // import { cart } from '../data/cat-data.js';
-import { findById, calcOrderTotal, toUSD, getCart } from '../utils.js';
+import { findById, calcOrderTotal, toUSD, getCart, clearCart } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
 
 const cart = getCart();
@@ -33,8 +33,9 @@ tdOrderTotal.textContent = toUSD(orderTotal);
 
 const orderBtn = document.getElementById('placeOrder');
 orderBtn.addEventListener('click', ()=> {
-    localStorage.removeItem('CART');
-    window.location.replace('..');
+    // localStorage.removeItem('CART');
+    // window.location.replace('..');
+    clearCart();
 });
 
 // const tfoot = document.getElementById('tfoot');

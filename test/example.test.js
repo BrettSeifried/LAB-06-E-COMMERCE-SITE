@@ -94,15 +94,30 @@ test('addItem should add an item if its empty', (expect) => {
 
 });
 
+// test('clearCart Empties out the cart', (expect) => {
+//     const fakeCart = [
+//         { id: '1', qty: 2 },
+//         { id: '4', qty: 3 }
+//     ];
+    
+//     localStorage.setItem('CART', JSON.stringify(fakeCart));
+//     localStorage.removeItem('CART');
+//     const expected = [];
+//     const actual = getCart();
+//     expect.deepEqual(actual, expected);
+// });
+
 test('clearCart Empties out the cart', (expect) => {
     const fakeCart = [
         { id: '1', qty: 2 },
         { id: '4', qty: 3 }
     ];
-    
+
     localStorage.setItem('CART', JSON.stringify(fakeCart));
     localStorage.removeItem('CART');
+
     const expected = [];
     const actual = getCart();
+
     expect.deepEqual(actual, expected);
 });

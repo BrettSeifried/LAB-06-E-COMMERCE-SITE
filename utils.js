@@ -40,5 +40,5 @@ export function addItem(id){
 
 export function clearCart(){
     localStorage.removeItem('CART');
-    // window.location.replace('..');
+    window.location.replace('..');
 }
