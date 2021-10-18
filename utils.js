@@ -66,14 +66,3 @@ export function addProduct(newShirt){
     let shirtsString = JSON.stringify(lsShirts);
     localStorage.setItem('PRODUCTS', shirtsString);
 }
-
-// export function removeProduct(oldShirt){
-//     //get shirt by ID
-//     let lsShirts = localStorage.getItem('PRODUCTS');
-//     const products = JSON.parse(lsShirts);
-//     const id = products.indexOf();
-//     const removeShirt = products.splice(id, 1);
-//     // remove it from array
-
-//     // send back
-// }

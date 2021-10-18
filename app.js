@@ -5,6 +5,7 @@ import { addItem, getProducts } from './utils.js';
 
 // initialize global state
 const shirtList = document.getElementById('shirt-list');
+// const removeList = document.getElementById('remove-list'); //not working remove
 const shirts = getProducts();
 
 // set event listeners 
@@ -22,3 +23,9 @@ for (let addButton of addBtns){
         addItem(addButton.id);
     });
 }
+
+//remove button on admin page - NOT working
+// for (let shirt of shirts){
+//     const removeCard = renderRemoveShirt(shirt);
+//     removeList.append(removeCard);
+// }
