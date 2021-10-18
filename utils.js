@@ -1,3 +1,5 @@
+import { shirts } from './data/shirts.js';
+
 export function findById(id, items){
     for (let item of items){
         if (item.id === id){
@@ -41,4 +43,26 @@ export function addItem(id){
 export function clearCart(){
     localStorage.removeItem('CART');
     window.location.replace('..');
+}
+
+export function getProducts(){
+    //get products
+    let lsShirts = localStorage.getItem('PRODUCTS');
+    const products = JSON.parse(lsShirts);
+    // if no noproducts, seed the data
+    if (!products){
+        const shirtsString = JSON.stringify(shirts);
+        localStorage.setItem('PRODUCTS', shirtsString);
+    }
+    return products || shirts;
+}
+
+export function addProduct(newShirt){
+    //get
+    let lsShirts = getProducts();
+    //modify
+    lsShirts.push(newShirt);
+    //set
+    let shirtsString = JSON.stringify(lsShirts);
+    localStorage.setItem('PRODUCTS', shirtsString);
 }

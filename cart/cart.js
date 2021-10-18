@@ -1,9 +1,10 @@
-import { shirts } from '../data/shirts.js';
+// import { shirts } from '../data/shirts.js';
 // import { cart } from '../data/cat-data.js';
-import { findById, calcOrderTotal, toUSD, getCart, clearCart } from '../utils.js';
+import { findById, calcOrderTotal, toUSD, getCart, clearCart, getProducts } from '../utils.js';
 import { renderLineItem } from '../render-line-items.js';
 
 const cart = getCart();
+const shirts = getProducts();
 
 const tbody = document.getElementById('table-body');
 for (let cartItem of cart){
