@@ -1,10 +1,11 @@
 // import functions and grab DOM elements
 import { renderShirt } from './render-products.js';
-import { shirts } from './data/shirts.js';
-import { addItem } from './utils.js';
+// import { shirts } from './data/shirts.js';
+import { addItem, getProducts } from './utils.js';
 
 // initialize global state
 const shirtList = document.getElementById('shirt-list');
+const shirts = getProducts();
 
 // set event listeners 
   // get user input

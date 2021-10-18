@@ -9,8 +9,32 @@
     <title>Admin Page</title>
 </head>
 <body>
-    <h1>Admin Page</h1>
-    <script type="module" src="./cart.js"></script>
+    <header>
+        <h1>Admin Page</h1>
+        <a href="../index.html">Home</a>
+        <a href="../cart/">Shopping Cart</a>
+    </header>
+        <form id="shirt-admin">
+            <label> ID
+                <input type="text" id="id" name="id">
+            </label>
+            <label> Name
+                <input type="text" id="name" name="name">
+            </label>
+            <label> Image
+                <input type="text" id="img" name="img">
+            </label>
+            <label> Description
+                <input type="text" id="descrip" name="descrip">
+            </label>
+            <label> Category
+                <input type="text" id="descrip" name="descrip">
+            </label>
+            <label> Price
+                <input type="text" id="price" name="price">
+            </label>
+            <button id="submit">SUBMIT</button>
+        </form>
     <script type="module" src="./add-products.js"></script>
 </body>
 </html>

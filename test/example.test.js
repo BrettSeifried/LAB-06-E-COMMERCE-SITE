@@ -2,7 +2,7 @@
 // import { example } from '../example.js';
 import { renderShirt } from '../render-products.js';
 import { shirts } from '../data/shirts.js';
-import { addItem, findById, getCart } from '../utils.js';
+import { addItem, findById, getCart, getProducts, addProduct } from '../utils.js';
 // import { cart } from '../data/cat-data.js';
 // import { renderLineItem } from '../render-line-items.js';
 
@@ -120,4 +120,22 @@ test('clearCart Empties out the cart', (expect) => {
     const actual = getCart();
 
     expect.deepEqual(actual, expected);
+});
+
+test('addProduct should add a product to the shirts array', (expect) => {
+    let products = getProducts();
+    const newShirt = {
+        id: '6',
+        name: 'Haikyuu',
+        img: '../assets/10.jpg',
+        description: 'Hinata jersey',
+        category: 'jersey',
+        price: '100',
+    };
+    //act
+    addProduct(newShirt);
+    
+    //assert
+    products = getProducts();
+    expect.equal(products.length, 6);
 });
