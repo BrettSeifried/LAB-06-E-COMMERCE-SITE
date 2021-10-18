@@ -22,6 +22,11 @@ export function renderShirt(shirt){
     addBtn.id = shirt.id;
     addBtn.classList.add('add-button');
 
-    shirtCard.append(shirtHeader, img, shirtDescrip, shirtCat, shirtPrice, addBtn);
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = 'Remove';
+    removeBtn.id = shirt.id;
+    removeBtn.classList.add('remove-button');
+
+    shirtCard.append(shirtHeader, img, shirtDescrip, shirtCat, shirtPrice, addBtn, removeBtn);
     return shirtCard;
 }

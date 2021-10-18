@@ -54,15 +54,26 @@ export function getProducts(){
         const shirtsString = JSON.stringify(shirts);
         localStorage.setItem('PRODUCTS', shirtsString);
     }
-    return lsShirts || shirts;
+    return products || shirts;
 }
 
 export function addProduct(newShirt){
     //get
-    let shirts = getProducts();
+    let lsShirts = getProducts();
     //modify
-    shirts.push(newShirt);
+    lsShirts.push(newShirt);
     //set
-    let shirtsString = JSON.stringify(shirts);
+    let shirtsString = JSON.stringify(lsShirts);
     localStorage.setItem('PRODUCTS', shirtsString);
 }
+
+// export function removeProduct(oldShirt){
+//     //get shirt by ID
+//     let lsShirts = localStorage.getItem('PRODUCTS');
+//     const products = JSON.parse(lsShirts);
+//     const id = products.indexOf();
+//     const removeShirt = products.splice(id, 1);
+//     // remove it from array
+
+//     // send back
+// }
